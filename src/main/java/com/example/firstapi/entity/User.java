@@ -1,14 +1,15 @@
 package com.example.firstapi.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.Data;
 
+import java.util.List;
+
+
 @Data
-@Entity
 public class User {
-    @Id
-    private long id;
-    private String userName;
+    private int id;
+    private String name;
     private String password;
+    private String email;
+    private List<Roles> roles;
 }
